@@ -1,0 +1,17 @@
+
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Starting application validation"
+      - test -f index.html
+      - grep -q "AWS Cloud DevOps Dashboard" index.html
+      - grep -q "Application Version" index.html
+      - echo "All application checks passed"
+
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/**/*
