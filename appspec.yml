@@ -21,3 +21,5 @@ hooks:
     - location: scripts/validate_service.sh
       timeout: 120
       runas: root
+
+file_exists_behavior: OVERWRITE
